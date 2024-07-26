@@ -95,9 +95,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 'This is the sample text for Flutter TextScroll widget with faded border.',
                 intervalSpaces: 10,
                 velocity: Velocity(pixelsPerSecond: Offset(50, 0)),
-                fadedBorder: true,
-                fadeBorderVisibility: FadeBorderVisibility.auto,
-                fadeBorderSide: FadeBorderSide.both,
               ),
               const SizedBox(height: 20),
               GestureDetector(
