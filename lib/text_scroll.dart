@@ -170,7 +170,10 @@ class _TextScrollState extends State<TextScroll>
     if (duration == Duration.zero) return;
 
     await _animateToPosition(singleRoundExtent, duration);
-    _scrollController.jumpTo(position.minScrollExtent);
+    if (_available) {
+      // ここでチェックを追加
+      _scrollController.jumpTo(position.minScrollExtent);
+    }
 
     if (widget.pauseBetween != null) {
       await Future.delayed(widget.pauseBetween!);
